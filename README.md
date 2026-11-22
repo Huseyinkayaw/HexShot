@@ -19,7 +19,11 @@ A local **screenshot and annotation** tool for macOS that never sends anything t
 ## Download
 **[⬇ Download HexShot.dmg](https://github.com/Huseyinkayaw/HexShot/raw/main/release/HexShot.dmg)** — open it and drag **HexShot** into **Applications**.
 
-Requires macOS 14+ on Apple Silicon (M1 or later). The app is not notarized by Apple, so the first time you open it macOS will warn you: right-click the app → **Open** → **Open**, or go to **System Settings → Privacy & Security → Open Anyway**.
+Requires macOS 14+ on Apple Silicon (M1 or later). The app is not notarized by Apple, so macOS blocks the first launch ("Apple could not verify…"). Click **Done**, then go to **System Settings → Privacy & Security**, scroll down and click **Open Anyway** next to HexShot. Or run this once in Terminal:
+
+```bash
+xattr -dr com.apple.quarantine /Applications/HexShot.app
+```
 
 SHA-256: `83361cb2ad78cb9b5afa4c22ec8f54b0240294d757d63d785e5ba56c7d6b2fc7`
 
@@ -50,6 +54,6 @@ macOS için yerel, internete hiçbir şey göndermeyen **ekran görüntüsü ve 
 - Görüntü yalnızca panoya veya seçtiğiniz dosyaya gider.
 - Bulanıklaştırma alttaki pikselleri kalıcı olarak yok eder (geri döndürülemez).
 
-**İndir:** **[⬇ HexShot.dmg](https://github.com/Huseyinkayaw/HexShot/raw/main/release/HexShot.dmg)** — açın ve **HexShot**'i **Uygulamalar** klasörüne sürükleyin. macOS 14+ ve Apple Silicon (M1 veya üstü) gerekir. Uygulama Apple tarafından onaylanmadığı (notarize edilmediği) için ilk açılışta uyarı çıkar: uygulamaya sağ tıklayın → **Aç** → **Aç**, ya da **Sistem Ayarları → Gizlilik ve Güvenlik → Yine de Aç**. SHA-256: `83361cb2ad78cb9b5afa4c22ec8f54b0240294d757d63d785e5ba56c7d6b2fc7`
+**İndir:** **[⬇ HexShot.dmg](https://github.com/Huseyinkayaw/HexShot/raw/main/release/HexShot.dmg)** — açın ve **HexShot**'i **Uygulamalar** klasörüne sürükleyin. macOS 14+ ve Apple Silicon (M1 veya üstü) gerekir. Uygulama Apple tarafından onaylanmadığı (notarize edilmediği) için macOS ilk açılışı engeller ("Apple … doğrulayamadı"). **Bitti**'ye basın, sonra **Sistem Ayarları → Gizlilik ve Güvenlik**'te aşağı inip HexShot için **Yine de Aç**'a tıklayın. Ya da Terminal'de bir kez şunu çalıştırın: `xattr -dr com.apple.quarantine /Applications/HexShot.app` SHA-256: `83361cb2ad78cb9b5afa4c22ec8f54b0240294d757d63d785e5ba56c7d6b2fc7`
 
 **Kaynaktan derleme:** macOS 14+, Apple Silicon ve Xcode Command Line Tools gerekir. `./build.sh` derler ve `/Applications`'a kurar; `--no-install` yalnızca derler. İlk kullanımda **Ekran Kaydı** izni gerekir.
