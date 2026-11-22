@@ -11,10 +11,17 @@ A local **screenshot and annotation** tool for macOS that never sends anything t
 - Copy with `⌘C` / `Enter` / double-click, save with `⌘S`
 - Lives in the menu bar, optional launch at login
 
+## Privacy & security
+- Makes no network connections.
+- Screenshots go only to the clipboard or to a file you choose; nothing is written anywhere else.
+- Blur permanently destroys the pixels underneath (not a reversible filter).
+
 ## Download
 **[⬇ Download HexShot.dmg](https://github.com/Huseyinkayaw/HexShot/raw/main/release/HexShot.dmg)** — open it and drag **HexShot** into **Applications**.
 
 Requires macOS 14+ on Apple Silicon (M1 or later). The app is not notarized by Apple, so the first time you open it macOS will warn you: right-click the app → **Open** → **Open**, or go to **System Settings → Privacy & Security → Open Anyway**.
+
+SHA-256: `83361cb2ad78cb9b5afa4c22ec8f54b0240294d757d63d785e5ba56c7d6b2fc7`
 
 ## Build from source
 Requirements: macOS 14+, Apple Silicon, Xcode Command Line Tools.
@@ -38,6 +45,11 @@ macOS için yerel, internete hiçbir şey göndermeyen **ekran görüntüsü ve 
 - `⌘C` / `Enter` / çift tık ile panoya kopyala, `⌘S` ile kaydet
 - Menü çubuğunda çalışır, girişte başlatılabilir
 
-**İndir:** **[⬇ HexShot.dmg](https://github.com/Huseyinkayaw/HexShot/raw/main/release/HexShot.dmg)** — açın ve **HexShot**'i **Uygulamalar** klasörüne sürükleyin. macOS 14+ ve Apple Silicon (M1 veya üstü) gerekir. Uygulama Apple tarafından onaylanmadığı (notarize edilmediği) için ilk açılışta uyarı çıkar: uygulamaya sağ tıklayın → **Aç** → **Aç**, ya da **Sistem Ayarları → Gizlilik ve Güvenlik → Yine de Aç**.
+**Gizlilik ve güvenlik**
+- İnternete bağlanmaz.
+- Görüntü yalnızca panoya veya seçtiğiniz dosyaya gider.
+- Bulanıklaştırma alttaki pikselleri kalıcı olarak yok eder (geri döndürülemez).
+
+**İndir:** **[⬇ HexShot.dmg](https://github.com/Huseyinkayaw/HexShot/raw/main/release/HexShot.dmg)** — açın ve **HexShot**'i **Uygulamalar** klasörüne sürükleyin. macOS 14+ ve Apple Silicon (M1 veya üstü) gerekir. Uygulama Apple tarafından onaylanmadığı (notarize edilmediği) için ilk açılışta uyarı çıkar: uygulamaya sağ tıklayın → **Aç** → **Aç**, ya da **Sistem Ayarları → Gizlilik ve Güvenlik → Yine de Aç**. SHA-256: `83361cb2ad78cb9b5afa4c22ec8f54b0240294d757d63d785e5ba56c7d6b2fc7`
 
 **Kaynaktan derleme:** macOS 14+, Apple Silicon ve Xcode Command Line Tools gerekir. `./build.sh` derler ve `/Applications`'a kurar; `--no-install` yalnızca derler. İlk kullanımda **Ekran Kaydı** izni gerekir.
